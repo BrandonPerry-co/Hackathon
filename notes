@@ -1,0 +1,6 @@
+- git clone {repo link}
+- git checkout -b {name of branch}
+- git add .
+- git commit -m "message"
+- git push --set-upstream origin {name of branch}
+- git pull origin master
