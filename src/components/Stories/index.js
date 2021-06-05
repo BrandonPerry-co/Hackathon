@@ -8,20 +8,21 @@ export default class Stories extends Component {
 
     //state - local storage
     this.state = {
-      story: []
-    }; // has to be an object 
+      arrayOfStories: []
+    };
   }
 
   componentDidMount() {
-    //call axios get to recieve stories array
     axios.get('http://hn.algolia.com/api/v1/search?query=story')
-      .then(response => response.data)
-      .then(data => this.setState({ story: data }));
+      .then(res => {
+        const arrayOfStories = res.data.hits
+        this.setState({ arrayOfStories })
+      })
+
   }
 
 
   render() {
-    // const { story } = this.state;
     return (
       <h1>Hello</h1>
     )
