@@ -23,8 +23,15 @@ export default class Stories extends Component {
 
 
   render() {
+    const { arrayOfStories } = this.state.arrayOfStories
     return (
-      <h1>Hello</h1>
+      <div>{arrayOfStories.map(story => {
+        return(
+        
+        )
+
+      }
+      )}</div>
     )
 
   }
