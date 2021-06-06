@@ -1,5 +1,5 @@
-
 import React from 'react';
+import ListArticle from './components/ListArticle'
 
 export default class Form extends React.Component {
   constructor(props) {
@@ -8,7 +8,7 @@ export default class Form extends React.Component {
     this.state = {
       title:'',
       author:'',
-      date:'',
+      create_at:'',
       tag:''
     };
 
@@ -30,7 +30,7 @@ export default class Form extends React.Component {
     this.setState({ 
       title:'',
       author:'',
-      date:'',
+      create_at:'',
       tag:''
      }) // after doing something with the data we reset the form value to empty quotes again
   }
@@ -40,30 +40,34 @@ export default class Form extends React.Component {
       <form onSubmit={this.handleSubmit}>
         {/* the value of the input is tied to this.state.value so when a user types the handleChange method changes this.state.value to match*/}
         <input
+        className='form_styles'
         name='title'
         placeholder='Title'
         value={this.state.title}
         onChange={event => this.handleChange(event)}
         />
         <input
+        className='form_styles'
         name='author'
         placeholder='Author'
         value={this.state.author}
         onChange={event => this.handleChange(event)}
         />
         <input
-        name='date'
-        placeholder='Date'
-        value={this.state.date}
+        className='form_styles'
+        name='create_at'
+        placeholder='Create At'
+        value={this.state.create_at}
         onChange={event => this.handleChange(event)}
         />
         <input
+        className='form_styles'
         name='tag'
         placeholder='Tag'
         value={this.state.tag}
         onChange={event => this.handleChange(event)}
         />
-        <button onClick={event=> this.handleSubmit}>Submit</button>
+        <button onClick={event => this.handleSubmit(event)}>Submit</button>
       </form>
     );
   }

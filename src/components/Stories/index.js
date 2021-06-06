@@ -1,15 +1,15 @@
 import { Component } from 'react';
 import axios from 'axios';
 
-export default class Stories extends Component {
+class Stories extends Component {
   //props - what we receive 
   constructor(props) {
     super(props);
 
     //state - local storage
     this.state = {
-      arrayOfStories: [],
-      value: ''
+      arrayOfStories: []
+      // value: ''
     };
   }
 
@@ -22,22 +22,10 @@ export default class Stories extends Component {
 
   }
 
-
   render() {
-    const { arrayOfStories } = this.state;
-    return (
-      <div>
-        {arrayOfStories.map(story => {
-          const { title, author, date, tag} = story;
-          return (
-            <Stories title={title} author={author} date={date}  key={tag} />
-          );
-
-        })}
-      </div>
-    );
+    return ()
   }
-
 }
 
 
+export default Stories

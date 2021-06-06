@@ -1,13 +1,12 @@
 import React from 'react';
 
-export default class DisplayArticleCard extends React.Component{
 
-render(){
+const DisplayArticleCard (props) =>{
 
-  return(){
-    
-  }
+  return(
+    {}
+  )
 }
 
 
-}
+export default DisplayArticleCard
