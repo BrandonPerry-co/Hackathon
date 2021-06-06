@@ -8,7 +8,8 @@ export default class Stories extends Component {
 
     //state - local storage
     this.state = {
-      arrayOfStories: []
+      arrayOfStories: [],
+      value: ''
     };
   }
 
@@ -23,18 +24,20 @@ export default class Stories extends Component {
 
 
   render() {
-    const { arrayOfStories } = this.state.arrayOfStories
+    const { arrayOfStories } = this.state;
     return (
-      <div>{arrayOfStories.map(story => {
-        return(
-        
-        )
+      <div>
+        {arrayOfStories.map(story => {
+          const { title, author, date, tag} = story;
+          return (
+            <Stories title={title} author={author} date={date}  key={tag} />
+          );
 
-      }
-      )}</div>
-    )
-
+        })}
+      </div>
+    );
   }
 
-
 }
+
+
