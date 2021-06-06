@@ -8,7 +8,8 @@ export default class Stories extends Component {
 
     //state - local storage
     this.state = {
-      arrayOfStories: []
+      arrayOfStories: [],
+      value: ''
     };
   }
 

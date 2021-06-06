@@ -1,5 +1,6 @@
+import React from 'react';
 
-export default class ListArticle extends Component {
+const ListArticle = (props) => {
   
   render() { 
     const {title, author, date, tag} = this.props;
@@ -14,4 +15,5 @@ export default class ListArticle extends Component {
      );
   }
 }
- 
+
+export default ListArticle
