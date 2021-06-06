@@ -23,18 +23,20 @@ export default class Stories extends Component {
 
 
   render() {
-    const { arrayOfStories } = this.state.arrayOfStories
+    const { arrayOfStories } = this.state;
     return (
-      <div>{arrayOfStories.map(story => {
-        return(
-        
-        )
+      <div>
+        {arrayOfStories.map(story => {
+          const { title, author, date, tag} = story;
+          return (
+            <Stories key={tag} date={date} author={author} title={title} />
+          );
 
-      }
-      )}</div>
-    )
-
+        })}
+      </div>
+    );
   }
 
-
 }
+
+

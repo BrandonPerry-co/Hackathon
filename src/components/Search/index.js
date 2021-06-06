@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export default class Form extends React.Component {
+export default class Form extends React.Component { //why is is React.Component instead of just Component
 
   render () {
     return (
