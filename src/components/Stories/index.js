@@ -30,7 +30,7 @@ export default class Stories extends Component {
         {arrayOfStories.map(story => {
           const { title, author, date, tag} = story;
           return (
-            <Stories key={tag} date={date} author={author} title={title} />
+            <Stories title={title} author={author} date={date}  key={tag} />
           );
 
         })}
